@@ -19,7 +19,7 @@
 - [لینک ترجمه مقاله](https://github.com/mahdieslaminet/Skin-Cancer-Detection/blob/main/Translated%20Classification%20of%20Skin%20Cancer%20Lesions%20Using%20Explainable%20Deep%20Learning.pdf
 )
   
-  
+  [Deploy Link](https://huggingface.co/spaces/bitavf/skinCancerDeploy)
 ---
 
 ## 🎯 اهداف پروژه
