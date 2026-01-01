@@ -12,7 +12,14 @@
 - آموزش مدل یادگیری عمیق
 - ارزیابی عملکرد مدل
 - پیش‌بینی نوع ضایعه پوستی
+- [لینک مقاله](https://github.com/mahdieslaminet/Skin-Cancer-Detection/blob/main/Classification%20of%20Skin%20Cancer%20Lesions%20Using%20Explainable%20Deep%20Learning%20.pdf)
+  
+   
 
+- [لینک ترجمه مقاله](https://github.com/mahdieslaminet/Skin-Cancer-Detection/blob/main/Translated%20Classification%20of%20Skin%20Cancer%20Lesions%20Using%20Explainable%20Deep%20Learning.pdf
+)
+  
+  
 ---
 
 ## 🎯 اهداف پروژه
@@ -30,7 +37,7 @@
 - 
 لینک kaggle:
 
-https://www.kaggle.com/datasets/hojjatk/mnist-dataset
+[DataSet Link](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000)
 > ⚠️ **توجه:**  
 > داده‌ها صرفاً برای اهداف تحقیقاتی استفاده شده‌اند و این پروژه **جایگزین تشخیص پزشکی تخصصی نیست**.
 
