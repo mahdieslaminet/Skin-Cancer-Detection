@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>تشخیص هوشمند سرطان پوست</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+
+    <h1>تشخیص هوشمند ضایعات پوستی</h1>
+    <p class="subtitle">تصویر واضح از ضایعه پوستی بارگذاری کنید</p>
+
+    <form action="/predict" method="post" id="form">
+
+        <label class="upload-box">
+            <input type="file" accept="image/*" required onchange="handleImage(this)">
+            <span>📷 انتخاب تصویر</span>
+        </label>
+
+        <!-- Base64 تصویر -->
+        <input type="hidden" name="image_base64" id="image_base64">
+
+        <!-- نمایش تصویر -->
+        {% if image_base64 %}
+            <img src="{{ image_base64 }}" id="preview" style="display:block;">
+        {% else %}
+            <img id="preview">
+        {% endif %}
+
+        <button type="submit" id="btn">تحلیل تصویر</button>
+    </form>
+
+    {% if result %}
+    <div class="result {{ risk }}">
+        <h2>نتیجه تشخیص</h2>
+        <p>{{ result }}</p>
+        <p>میزان اطمینان مدل: {{ confidence }}%</p>
+    </div>
+    {% endif %}
+
+</div>
+
+<script>
+function handleImage(input) {
+    const file = input.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function () {
+        const base64 = reader.result;
+        document.getElementById("preview").src = base64;
+        document.getElementById("preview").style.display = "block";
+        document.getElementById("image_base64").value = base64;
+    };
+
+    reader.readAsDataURL(file);
+}
+
+document.getElementById("form").onsubmit = () => {
+    document.getElementById("btn").innerText = "در حال تحلیل...";
+};
+</script>
+
+</body>
+</html>
